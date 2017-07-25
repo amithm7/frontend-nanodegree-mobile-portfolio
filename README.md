@@ -1,3 +1,42 @@
+# Website Optimization
+
+## Install
+1. Clone this repository
+2. Navigate to this repo on terminal
+  ```bash
+  cd path/to/repo/
+  ```
+3. Run Server
+  ```bash
+  python -m SimpleHTTPServer 3000
+  ```
+4. Install ngrok and run
+  ```bash
+  ./ngrok http 3000
+  ```
+
+## Optimizations
+
+### Part 1: Optimizing index.html
+* CSS, Remove render blocking
+  - Inline CSS for screen
+  - Using media query for CSS print
+* JS
+  - Async Analytics JS
+* Images
+  - Compressed and resized images
+* Fonts
+  - Removed fonts for faster loading
+
+### Part 2: Optimizing Frames per Second in pizza.html
+* Refactor pizza position calculator, put repeating code outside loop (053eb26)
+* Refactor pizza size changer for DRY and put repeating code outside loop (5b05089)
+* Refactor pizza loader for DRY (674aa7b)
+* Reduce the number of moving pizzas created (5f3f67f)
+* Reduce Layout thrashing (c16bbd3)
+
+--------------------------------------------------------------------------------
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
